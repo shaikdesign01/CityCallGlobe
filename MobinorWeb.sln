@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobinorWeb", "MobinorWeb\MobinorWeb.csproj", "{FC2FEF96-5433-48DB-B0F4-FE28F0839A28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobinor.Repository", "Mobinor.Repository\Mobinor.Repository.csproj", "{A68576F2-FD64-443C-9001-CCC99132AEDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3D49B5CC-E502-46FF-94DB-AC1B44C93E86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobinor.BusinessObjects", "Mobinor.BusinessObjects\Mobinor.BusinessObjects.csproj", "{4D3AB961-9C7B-47E9-9351-C7AC4085985D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D05495DE-BF86-4FFA-B722-CF66375DB9D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{67D3E386-B448-4AAE-8942-5D9E46699AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobinor.BusinessServices", "Mobinor.BusinessServices\Mobinor.BusinessServices.csproj", "{B9D8A386-AD46-4F1C-A796-4C9B62225005}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC2FEF96-5433-48DB-B0F4-FE28F0839A28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2FEF96-5433-48DB-B0F4-FE28F0839A28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2FEF96-5433-48DB-B0F4-FE28F0839A28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2FEF96-5433-48DB-B0F4-FE28F0839A28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A68576F2-FD64-443C-9001-CCC99132AEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A68576F2-FD64-443C-9001-CCC99132AEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A68576F2-FD64-443C-9001-CCC99132AEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A68576F2-FD64-443C-9001-CCC99132AEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3AB961-9C7B-47E9-9351-C7AC4085985D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3AB961-9C7B-47E9-9351-C7AC4085985D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3AB961-9C7B-47E9-9351-C7AC4085985D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3AB961-9C7B-47E9-9351-C7AC4085985D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9D8A386-AD46-4F1C-A796-4C9B62225005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D8A386-AD46-4F1C-A796-4C9B62225005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D8A386-AD46-4F1C-A796-4C9B62225005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D8A386-AD46-4F1C-A796-4C9B62225005}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC2FEF96-5433-48DB-B0F4-FE28F0839A28} = {67D3E386-B448-4AAE-8942-5D9E46699AF4}
+		{A68576F2-FD64-443C-9001-CCC99132AEDE} = {D05495DE-BF86-4FFA-B722-CF66375DB9D8}
+		{4D3AB961-9C7B-47E9-9351-C7AC4085985D} = {3D49B5CC-E502-46FF-94DB-AC1B44C93E86}
+		{B9D8A386-AD46-4F1C-A796-4C9B62225005} = {D05495DE-BF86-4FFA-B722-CF66375DB9D8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,242 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>News Ticker using jquery</title>
+    <!-- 	<link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="Content/css/main.css">
+    <link rel="author" href="humans.txt">
+    <link rel="stylesheet" href="Content/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="Content/css/unslider.css">
+
+    <style>
+        header {
+            height: 60px;
+            margin: 10px auto;
+            background: white;
+            border-bottom: 2px solid #e7e7e7;
+        }
+
+        .unslider .unslider-arrow, .unslider .unslider-arrow {
+            display: block;
+            width: 32px;
+            height: 32px;
+            top: 50%;
+            right: 350px;
+            left: auto;
+            margin-top: -55px;
+            overflow: hidden;
+            background: rgba(0,0,0,.2) no-repeat 50% 50%;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==');
+            background-size: 7px 11px;
+            border-radius: 32px;
+            text-indent: -999em;
+            opacity: .6;
+            transition: opacity .2s;
+        }
+
+            .unslider .unslider-arrow:hover, .unslider .unslider-arrow:hover {
+                opacity: 1;
+            }
+
+            .unslider .unslider-arrow.prev, .unslider .unslider-arrow.prev {
+                left: 25px;
+                right: auto;
+                -ms-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+
+        .my-slider {
+            height: 315px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="columns eight">
+                <div class="my-slider">
+                    <ul>
+                        <li>Slider is not working due to Script Files Conflicts</li>
+                    </ul>
+                    <!--<ul>
+                        <li><img src="Content/images/slide4.jpg" alt=""></li>
+                        <li><img src="Content/images/slide4.jpg" alt=""></li>
+                        <li><img src="Content/images/slide4.jpg" alt=""></li>
+                    </ul>-->
+                </div>
+            </div>
+            <div class="columns four">
+                <div class="loginform">
+                    <div class="card card-signup">
+                        <form class="form" method="" action="">
+                            <div class="header header-primary text-center">
+                                <h4>Sign in</h4>
+                            </div>
+
+                            <div class="content">
+                                <div class="form-group is-empty">
+                                    <input type="email" class="form-control underline-input" placeholder="Username">
+                                    <span class="material-input"></span>
+                                </div>
+                                <div class="form-group is-empty">
+                                    <input type="password" placeholder="Password..." class="form-control underline-input">
+                                    <span class="material-input"></span>
+                                </div>
+
+                            </div>
+                            <div class="footer text-center">
+                                <a href="index.html" class="btn btn-primary btn-raised">Login</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="row">
+            <div class="columns twelve">
+                <div class="ribbon1">
+                    <span>Latest Updates</span>
+                </div>
+                <div class="newstickercon">
+                    <ul class="newsticker">
+                        <li>Welcome to first jquery news ticker scrolling</li>
+                        <li>Welcome to first jquery news ticker scrolling</li>
+                        <li>Welcome to fifth jquery news ticker scrolling</li>
+                        <li>Welcome to fourth jquery news ticker scrolling</li>
+                        <li>Welcome to third jquery news ticker scrolling</li>
+                        <li>Welcome to second jquery news ticker scrolling</li>
+                        <li>Welcome to ninth jquery news ticker scrolling</li>
+                        <li>Welcome to sixth jquery news ticker scrolling</li>
+                        <li>Welcome to last jquery news ticker scrolling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="clear"></div>
+    <div class="maincontent">
+        <div class="dialerscontent">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="columns nine">
+                        <h4>Download Dialers</h4>
+                        <div class="row">
+                            <div class="columns four">
+
+                                <img src="Content/images/ae.png" alt="">
+                                <h5>UAE</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                            <div class="columns four">
+
+                                <img src="Content/images/kw.png" alt="">
+                                <h5>KUWAIT</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                            <div class="columns four">
+
+                                <img src="Content/images/om.png" alt="">
+                                <h5>OMAN</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="columns four">
+
+                                <img src="Content/images/sa1.png" alt="">
+                                <h5>SAUDI ARABIA</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                            <div class="columns four">
+
+                                <img src="Content/images/bh1.png" alt="">
+                                <h5>BAHRAIN</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                            <div class="columns four">
+
+                                <img src="Content/images/qa1.png" alt="">
+                                <h5>QATAR</h5>
+                                <a href="" class="button">Download Dialers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="columns three">
+                        <h4>Latest Updates</h4>
+                        <ul class="latestupdates">
+
+                            <li>
+                                <span>NEW ITEL CODE FOR UAE</span>
+                                <p>New itel dialer code has been introduced to UAE customers, due to frequent ISP blocking.</p>
+                            </li>
+                            <li>
+                                <span>HD DIALER UPDATED </span>
+                                <p>Due to frequent blockage in UAE, we have added HD dialer for UAE customers.</p>
+                            </li>
+                            <li>
+                                <span>NEW ITEL CODE FOR UAE</span>
+                                <p>New itel dialer code has been introduced to UAE customers, due to frequent ISP blocking.</p>
+                            </li>
+                            <li>
+                                <span>HD DIALER UPDATED </span>
+                                <p>Due to frequent blockage in UAE, we have added HD dialer for UAE customers.</p>
+                            </li>
+                            <li>
+                                <span>NEW ITEL CODE FOR UAE</span>
+                                <p>New itel dialer code has been introduced to UAE customers.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../../Scripts/MobinorJS/ticker.js"></script>
+    <script src="../../Scripts/MobinorJS/unslider-min.js"></script>
+    <script src="../../Scripts/MobinorJS/jquery.bxslider.min.js"></script>
+   
+
+    <script>
+			jQuery(document).ready(function($) {
+				$('.my-slider').unslider({
+
+					nav: false,
+					autoplay: true,
+				});
+			});
+    </script>
+    <script type="text/javascript">
+    		$(document).ready(function(){
+			  $('.bxslider').bxSlider({
+
+			  	responsive: true,
+			  	pager:false,
+
+			  });
+			});
+    </script>
+    <script>
+    		$(document).ready(function() {
+
+    			$("#burger-container").on('click',function(){
+
+    				$("header nav ul").toggleClass('open');
+    			});
+    		});
+    </script>
+
+</body>
+</html>

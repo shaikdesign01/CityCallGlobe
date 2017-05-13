@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="mobinorApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mobinor Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link rel="author" href="humans.txt">
+    <link href="~/Content/css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="~/Content/css/unslider.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angular")
+    
+</head>
+<body  ng-controller="homeController">
+   
+    <header>
+        <div class="container">
+            <h1 class="logo">Logo Name</h1>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#dailer"><i class="fa fa-shield"></i> Dialer</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <li><a href="#reseller"><i class="fa fa-comment"></i> Reseller</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    @RenderBody()
+   
+    <div id="main">
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view></div>
+    </div>
+    <div>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - All rights reserved mobinor.net</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/appendDirectives")
+    @Scripts.Render("~/bundles/appendControllers")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
