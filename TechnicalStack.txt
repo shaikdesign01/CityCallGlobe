@@ -1,2 +1,8 @@
 www.citycallglobe.com/index.html --> Reference
-shaikdesign01
+
+Softwares to Install 
+Visual studio 2015
+SQL Server 2008 R2
+Git hub/ gitbash
+
+
