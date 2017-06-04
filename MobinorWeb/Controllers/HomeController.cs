@@ -12,7 +12,6 @@ namespace MobinorWeb.Controllers
         
         public ActionResult Index()
         {
-           
             return View();
         }
 
