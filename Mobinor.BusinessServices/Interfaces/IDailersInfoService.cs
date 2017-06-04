@@ -12,5 +12,17 @@ namespace Mobinor.BusinessServices.Interfaces
         /// </summary>
         /// <returns></returns>
         IEnumerable<Country> GetCountries();
-    }
+
+        /// <summary>
+        /// Get Dailer Info
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<DailersInfo> GetDailerDetails();
+
+        /// <summary>
+        /// Gets mobile details
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<MobileDetail> GetMobileDetails()
+;    }
 }

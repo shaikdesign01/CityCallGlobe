@@ -1,23 +1,23 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace MobinorWeb
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+
+        //private const string basePath = "~/Scripts/CityCallScripts";
+        //private const string virtualPath = "~/Contents/templates/";
+        
         public static void RegisterBundles(BundleCollection bundles)
         {
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
             
-            //D:\Projects\Mushtak_Projects\MobinorWeb\MobinorWeb\Scripts\angular\angular.js
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
@@ -31,15 +31,27 @@ namespace MobinorWeb
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular/angular.js",
+                        "~/Scripts/ui-grid.js",
                         "~/Scripts/angular-route.js",
-                        "~/Scripts/angular-resource.js"));
+                        "~/Scripts/angular-resource.js",
+                        "~/Scripts/lodash.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appendDirectives").Include(
-                        "~/Scripts/MobinorScripts/app/app.js"));
+                        "~/Scripts/CityCallScripts/app/app.js",
+                          "~/Scripts/CityCallScripts/Admin/dailer/directives/dailerDetailsDirective.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/appendServices").Include(
+                     "~/Scripts/CityCallScripts/Admin/dailer/services/dailerDetailsService.js",
+                      "~/Scripts/CityCallScripts/Admin/dailer/services/dailerDetailsFactory.js",
+                     "~/Scripts/CityCallScripts/common/lodashFactory.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appendControllers").Include(
-                       "~/Scripts/MobinorScripts/DialerModule/homeController.js",
-                         "~/Scripts/MobinorScripts/DialerModule/dailerController.js"));
+                       "~/Scripts/CityCallScripts/Admin/homeController.js",
+                         "~/Scripts/CityCallScripts/Admin/dailer/controllers/dailerDetailsController.js",
+                          "~/Scripts/CityCallScripts/Admin/login/controllers/adminHomeController.js",
+                         "~/Scripts/CityCallScripts/Admin/login/controllers/indexController.js",
+                        "~/Scripts/CityCallScripts/Admin/login/controllers/loginController.js"));
+
         }
     }
 }

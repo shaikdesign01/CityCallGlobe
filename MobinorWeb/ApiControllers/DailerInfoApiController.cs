@@ -23,6 +23,7 @@ namespace MobinorWeb.ApiControllers
         {
             this.dailersInfo = dailersInfo;
         }
+
         /// <summary>
         /// Get Countries Function
         /// </summary>
@@ -30,6 +31,24 @@ namespace MobinorWeb.ApiControllers
         public IEnumerable<Country> GetCountries()
         {
             return dailersInfo.GetCountries();
+        }
+
+        /// <summary>
+        /// Gets Dailers Details
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<DailersInfo> GetDailerDetails()
+        {
+            return dailersInfo.GetDailerDetails();
+        }
+
+        /// <summary>
+        /// Gets Mobile Details
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<MobileDetail> GetMobileDetails()
+        {
+            return dailersInfo.GetMobileDetails();
         }
     }
 }

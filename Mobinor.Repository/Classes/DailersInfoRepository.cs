@@ -23,5 +23,25 @@ namespace Mobinor.Repository.Classes
             var countryList = from rel in DbContext.Countries select rel;
             return countryList.ToList();
         }
+
+        /// <summary>
+        /// Gets Dailer Info 
+        /// </summary>
+        /// <returns>List of dailer details</returns>
+        public IEnumerable<DailerInfo> GetDailerInfo()
+        {
+            var dailerInfoList = from dal in DbContext.DailerInfoes select dal;
+            return dailerInfoList.ToList();
+        }
+
+        /// <summary>
+        /// Gets Mobile Details
+        /// </summary>
+        /// <returns>List of mobile details</returns>
+        public IEnumerable<MobileDetail> GetMobileDetails()
+        {
+            var mobileInfoList = from dal in DbContext.MobileDetails select dal;
+            return mobileInfoList.ToList();
+        }
     }
 }

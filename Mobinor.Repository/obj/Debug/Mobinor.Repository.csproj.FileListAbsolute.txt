@@ -8,3 +8,13 @@ D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.Repository\bin\Debug\EntityFrame
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.Repository\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.Repository\obj\Debug\Mobinor.Repository.dll
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.Repository\obj\Debug\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\Mobinor.Repository.dll.config
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFramework.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFramework.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.csprojResolveAssemblyReference.cache
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.pdb

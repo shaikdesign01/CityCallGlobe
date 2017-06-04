@@ -5,6 +5,7 @@ using Mobinor.BusinessServices.Interfaces;
 using Mobinor.Repository.Interfaces;
 using System.Threading.Tasks;
 using Mobinor.BusinessServices.Common;
+using System;
 
 namespace Mobinor.BusinessServices
 {
@@ -21,7 +22,7 @@ namespace Mobinor.BusinessServices
         /// Constructor for DailersInfoService, Injecting Dependency
         /// </summary>
         /// <param name="dailerInfoRepo"></param>
-        public DailersInfoService (IDailersInfoRepository dailerInfoRepo)
+        public DailersInfoService(IDailersInfoRepository dailerInfoRepo)
         {
             this.dailerInfoRepo = dailerInfoRepo;
         }
@@ -31,7 +32,7 @@ namespace Mobinor.BusinessServices
         /// <returns></returns>
         public IEnumerable<Country> GetCountries()
         {
-            IEnumerable<Repository.Country> countryEntities =  this.dailerInfoRepo.GetCountries();
+            IEnumerable<Repository.Country> countryEntities = this.dailerInfoRepo.GetCountries();
             IEnumerable<BusinessObjects.Country> data = EntityMapper.ConvertEntityToModel(countryEntities);
             return data;
         }
@@ -41,6 +42,35 @@ namespace Mobinor.BusinessServices
         //    IEnumerable<string> sresults;
         //    var query = from rel in DbContext.Countries select rel;
         //    return sresults = query.ToList().Select(s => s.CountryName);
-        //}
+        //} 
+
+        /// <summary>
+        /// Get Dailers Details
+        /// </summary>
+        /// <returns>List of dailer details</returns>
+        public IEnumerable<DailersInfo> GetDailerDetails()
+        {
+            IEnumerable<Repository.DailerInfo> dailerEntities = this.dailerInfoRepo.GetDailerInfo();
+            IEnumerable<BusinessObjects.DailersInfo> data = EntityMapper.ConvertEntityToModel(dailerEntities);
+            return data;
+        }
+
+        /// <summary>
+        /// Gets Mobile details
+        /// </summary>
+        /// <returns>List of mobile details</returns>
+        public IEnumerable<MobileDetail> GetMobileDetails()
+        {
+            try
+            {
+                IEnumerable<Repository.MobileDetail> mobileEntities = this.dailerInfoRepo.GetMobileDetails();
+                IEnumerable<BusinessObjects.MobileDetail> data = EntityMapper.ConvertEntityToModel(mobileEntities);
+                return data;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
