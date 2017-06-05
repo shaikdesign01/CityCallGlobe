@@ -1,0 +1,5 @@
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\bin\Release\Mobinor.BusinessObjects.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\bin\Release\Mobinor.BusinessObjects.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Release\Mobinor.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Release\Mobinor.BusinessObjects.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Release\Mobinor.BusinessObjects.pdb

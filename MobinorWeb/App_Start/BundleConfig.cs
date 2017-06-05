@@ -46,7 +46,7 @@ namespace MobinorWeb
                      "~/Scripts/CityCallScripts/common/lodashFactory.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appendControllers").Include(
-                       "~/Scripts/CityCallScripts/Admin/homeController.js",
+                      // "~/Scripts/CityCallScripts/Admin/homeController.js",
                          "~/Scripts/CityCallScripts/Admin/dailer/controllers/dailerDetailsController.js",
                           "~/Scripts/CityCallScripts/Admin/login/controllers/adminHomeController.js",
                          "~/Scripts/CityCallScripts/Admin/login/controllers/indexController.js",

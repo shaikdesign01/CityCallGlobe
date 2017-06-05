@@ -1,14 +1,17 @@
-﻿(function () {
+﻿/// <reference path="D:\Projects\Mushtak_Projects\CityCallGlobe\MobinorWeb\Content/templates/Admin/dailer/dailerDetails.tmpl.html" />
+(function () {
 
     'use strict';
 
-    angular.module('app').directive('myCustomer', myCustomer);
+    angular.module('app').directive('dailerDetails', dailerDetails);
 
-    function myCustomer() {
+    function dailerDetails() {
         return {
             restrict: 'AE',
             replace: 'true',
-            template: '<h3>Hello World!!</h3>'
+            templateUrl:'/Content/templates/Admin/dailer/dailerDetails.tmpl.html',
+            controller: 'dailerDetailsController',
+            bindToController: true
         };
     }
 

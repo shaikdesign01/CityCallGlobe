@@ -1,0 +1,10 @@
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\Mobinor.Repository.dll.config
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\EntityFramework.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\EntityFramework.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Release\Mobinor.Repository.csprojResolveAssemblyReference.cache
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Release\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Release\Mobinor.Repository.pdb

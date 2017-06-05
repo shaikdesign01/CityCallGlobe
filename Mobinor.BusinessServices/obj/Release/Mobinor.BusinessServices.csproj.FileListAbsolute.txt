@@ -1,0 +1,16 @@
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.BusinessServices.dll.config
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.BusinessServices.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.BusinessServices.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\AutoMapper.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\EntityFramework.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.BusinessObjects.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.BusinessObjects.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\AutoMapper.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\EntityFramework.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Release\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Release\Mobinor.BusinessServices.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Release\Mobinor.BusinessServices.pdb
