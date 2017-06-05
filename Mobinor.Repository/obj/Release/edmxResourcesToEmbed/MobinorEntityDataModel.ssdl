@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobinorDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DailerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobileId" Type="int" />
+    <Property Name="DailerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DailerLink" Type="nvarchar" MaxLength="50" />
+    <Property Name="OperatorCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+  </EntityType>
+  <EntityType Name="MobileDetails">
+    <Key>
+      <PropertyRef Name="MobileId" />
+    </Key>
+    <Property Name="MobileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MobileName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="MobinorDBModelStoreContainer">
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailerInfo" EntityType="Self.DailerInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MobileDetails" EntityType="Self.MobileDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

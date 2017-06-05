@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MobinorDBModelStoreContainer" CdmEntityContainer="MobinorDBEntities">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="MobinorDBModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailerInfoes">
+      <EntityTypeMapping TypeName="MobinorDBModel.DailerInfo">
+        <MappingFragment StoreEntitySet="DailerInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MobileId" ColumnName="MobileId" />
+          <ScalarProperty Name="DailerName" ColumnName="DailerName" />
+          <ScalarProperty Name="DailerLink" ColumnName="DailerLink" />
+          <ScalarProperty Name="OperatorCode" ColumnName="OperatorCode" />
+          <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MobileDetails">
+      <EntityTypeMapping TypeName="MobinorDBModel.MobileDetail">
+        <MappingFragment StoreEntitySet="MobileDetails">
+          <ScalarProperty Name="MobileId" ColumnName="MobileId" />
+          <ScalarProperty Name="MobileName" ColumnName="MobileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
