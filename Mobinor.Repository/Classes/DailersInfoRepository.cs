@@ -13,7 +13,10 @@ namespace Mobinor.Repository.Classes
         /// <summary>
         /// DBContext for MobinorDBEntities
         /// </summary>
-        private MobinorDBEntities DbContext = new MobinorDBEntities();
+        //private MobinorDBEntities DbContext = new MobinorDBEntities();
+        private ccgEntities DbContext = new ccgEntities();
+
+
         /// <summary>
         /// Method for Get Countries from database
         /// </summary>

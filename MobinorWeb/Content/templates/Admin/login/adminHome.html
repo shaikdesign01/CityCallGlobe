@@ -1,7 +1,7 @@
 ﻿
 <nav class="{{active}}" ng-click="$event.preventDefault()">
     <!-- When a link in the menu is clicked, we set the active variable -->
-    <a href="#" class="home" ng-click="active='Dailer'">Dailer</a>
+    <a href="#" class="home" ng-model="active" ng-click="active='Dailer'">Dailer</a>
     <a href="#" class="about" ng-click="active='Add Dailers'">Add Dailers</a>
     <a href="#" class="contact" ng-click="active='contact'">Contact</a>
 </nav>
@@ -10,7 +10,9 @@
 
     <!--<div dailer-details></div>-->
     </p>
+<div ng-if="active === 'Dailer'">
+    <div dailer-details></div>
+</div>
 
-<div dailer-details ng-show="({{active}} === Dailer)"></div>
 
 

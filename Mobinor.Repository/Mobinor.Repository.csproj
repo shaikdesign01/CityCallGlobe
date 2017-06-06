@@ -51,16 +51,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCGEntityDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCGEntityDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CCGEntityDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCGEntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CCGEntityDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCGEntityDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DailersInfoRepository.cs" />
     <Compile Include="Country.cs">
-      <DependentUpon>MobinorEntityDataModel.tt</DependentUpon>
+      <DependentUpon>CCGEntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="DailerInfo.cs">
-      <DependentUpon>MobinorEntityDataModel.tt</DependentUpon>
+      <DependentUpon>CCGEntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IDailersInfoRepository.cs" />
     <Compile Include="MobileDetail.cs">
-      <DependentUpon>MobinorEntityDataModel.tt</DependentUpon>
+      <DependentUpon>CCGEntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MobinorEntityDataModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -87,6 +102,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MobinorEntityDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="CCGEntityDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CCGEntityDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CCGEntityDataModel.edmx.diagram">
+      <DependentUpon>CCGEntityDataModel.edmx</DependentUpon>
+    </None>
     <None Include="MobinorEntityDataModel.edmx.diagram">
       <DependentUpon>MobinorEntityDataModel.edmx</DependentUpon>
     </None>
@@ -96,6 +118,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CCGEntityDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CCGEntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>CCGEntityDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CCGEntityDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CCGEntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>CCGEntityDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="MobinorEntityDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MobinorEntityDataModel.edmx</DependentUpon>
