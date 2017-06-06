@@ -30,3 +30,19 @@ D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\En
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.dll
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll.config
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.pdb
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.pdb
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.pdb
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.xml
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.xml
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.xml
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.dll
+E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb
