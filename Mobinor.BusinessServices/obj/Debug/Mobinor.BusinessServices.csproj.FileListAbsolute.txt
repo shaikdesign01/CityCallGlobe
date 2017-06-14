@@ -14,22 +14,6 @@ D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessServices\obj\Debug\Mobin
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessServices\bin\Debug\AutoMapper.dll
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessServices\bin\Debug\AutoMapper.xml
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll.config
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.pdb
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.pdb
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.pdb
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.xml
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.xml
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.xml
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.dll
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll.config
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.pdb
@@ -46,3 +30,19 @@ E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.dll
 E:\web projects\github projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll.config
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessServices.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.BusinessObjects.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\AutoMapper.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.csprojResolveAssemblyReference.cache
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.dll
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessServices\obj\Debug\Mobinor.BusinessServices.pdb

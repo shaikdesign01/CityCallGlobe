@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Mobinor.Repository.Interfaces;
-
+using System.Data.Entity;
 
 namespace Mobinor.Repository.Classes
 {
@@ -45,6 +45,39 @@ namespace Mobinor.Repository.Classes
         {
             var mobileInfoList = from dal in DbContext.MobileDetails select dal;
             return mobileInfoList.ToList();
+        }
+
+        /// <summary>
+        /// Update dailers data
+        /// </summary>
+        /// <param name="dailerInfo"></param>
+        public void UpdateDailerDetails(DailerInfo dailerInfo)
+        {
+            DbContext.Entry(dailerInfo).State = EntityState.Modified;
+            DbContext.SaveChanges();
+        }
+
+        /// <summary>
+        /// Delete dailers data
+        /// </summary>
+        /// <param name="dailerId"></param>
+        public void DeleteDailerDetails(int dailerId)
+        {
+            DailerInfo dailerToDelete;
+                dailerToDelete = DbContext.DailerInfoes.Where(s => s.Id == dailerId).FirstOrDefault<DailerInfo>();
+
+            DbContext.Entry(dailerToDelete).State = EntityState.Deleted;
+            DbContext.SaveChanges();
+        }
+
+        /// <summary>
+        /// Saves Dailers data
+        /// </summary>
+        /// <param name="dailersData"></param>
+        public void SaveDailersDetails(DailerInfo dailersData)
+        {
+            DbContext.DailerInfoes.Add(dailersData);
+            DbContext.SaveChanges();
         }
     }
 }

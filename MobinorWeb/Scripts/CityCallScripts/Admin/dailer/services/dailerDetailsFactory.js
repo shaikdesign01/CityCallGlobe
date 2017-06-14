@@ -13,9 +13,9 @@
         ){
 
         return {
-            getCountries: [],
-            getDailerDetails: [],
-            getMobileDetails:[]
+            countrydata: [],
+            dailerData: [],
+            mobileData:[]
         }
     }
 

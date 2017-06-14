@@ -6,85 +6,117 @@
         '$scope',
         '$http',
         'dailerDetailsService',
-        'dailerDetailsFactory'
+        'dailerDetailsFactory',
+        '$uibModal',
+        '$q'
     ];
 
     function dailerDetailsController(
         $scope,
         $http,
         dailerDetailsService,
-        dailerDetailsFactory) {
+        dailerDetailsFactory, $uibModal, $q) {
 
         var vm = this;
-
-        vm.getCountries = function () {
-            dailerDetailsService.getCountries().then(function (countries) {
-                dailerDetailsFactory.getCountries = countries;
-            });
-        }
-
-        vm.getMobileDetails = function () {
-            dailerDetailsService.getMobileDetails().then(function (response) {
-                dailerDetailsFactory.getMobileDetails = response;
-            });
-        }
+        $scope.gridOptions = {
+            data: [],
+            columnDef: []
+        };
 
         vm.getDailerDetails = function () {
-            dailerDetailsService.getDailerDetails().then(function (response) {
 
-                dailerDetailsFactory.getDailerDetails = response;
+            let promises = {
+                dailerData: dailerDetailsService.getDailerDetails(),
+                countrydata: dailerDetailsService.getCountries(),
+                mobileData: dailerDetailsService.getMobileDetails()
+            }
 
-                _.each(dailerDetailsFactory.getDailerDetails, function (field) {
-                    return _.find(dailerDetailsFactory.getCountries, function (row) {
-                        if (row.CountryId == field.CountryId) {
-                            field.CountryName = row.CountryName;
-                        }
-                    });
+            $q.all(promises).then((values) => {
+
+                dailerDetailsFactory.dailerData = values.dailerData;
+                dailerDetailsFactory.countrydata = values.countrydata;
+                dailerDetailsFactory.mobileData = values.mobileData;
+
+                _.each(dailerDetailsFactory.dailerData, function (field) {
+                    var country = _.find(values.countrydata, { CountryId: field.CountryId });
+                    field.CountryName = country ? country.CountryName : '';
+
+                    var phone = _.find(values.mobileData, { MobileId: field.MobileId });
+                    field.MobileName = phone ? phone.MobileName : '';
+
                 });
-
-                _.each(dailerDetailsFactory.getDailerDetails, function (field) {
-                    return _.find(dailerDetailsFactory.getMobileDetails, function (row) {
-                        if (row.MobileId == field.MobileId) {
-                            field.MobileName = row.MobileName;
-                        }
-                    });
-                });
-             
-                $scope.gridOptions.data = dailerDetailsFactory.getDailerDetails;
+                $scope.gridOptions.data = dailerDetailsFactory.dailerData;
             });
         }
 
-        $scope.gridOptions = {};
-        vm.getCountries();
-        vm.getMobileDetails();
         vm.getDailerDetails();
 
         $scope.Delete = function (row) {
-            var index = $scope.gridOptions.data.indexOf(row.entity);
-            $scope.gridOptions.data.splice(index, 1);
+            dailerDetailsService.deleteDailersInfo(row.Id).then(function (response) {
+                dailerDetailsFactory.dailerData = [];
+                vm.getDailerDetails();
+            });
         };
 
-        $scope.gridOptions.columnDefs = [{
-            name: 'Country',
-            field: 'CountryName'
-        }, {
-            name: 'Mobile',
-            field: 'MobileName'
-        }, {
-            name: 'DailerName',
-            field: 'DailerName'
-        }, {
-            name: 'OperatorCode',
-            field: 'OperatorCode'
-        }, {
-            name: 'ShowScope',
-            cellTemplate: '<button class="btn primary" ng-click="grid.appScope.Delete(row)">Delete Me</button>'
-        }];
+        $scope.editDailer = function (editedRowData) {
+            openModalPopUp(editedRowData);
+        }
+
+        function openModalPopUp(editedData) {
+            var modalInstance;
+            modalInstance = $uibModal.open({
+                templateUrl: '/Content/templates/Admin/dailer/addEditDailerDetails.tmpl.html',
+                animation: true,
+                size: 'sm',
+                backdrop: "static",
+                controller: 'addEditDailerDetailsCtrl as AEDD',
+                resolve: {
+                    modalData: function () { return editedData; }
+                }
+            });
+
+            modalInstance.result.then(
+                function (result) {
+                    dailerDetailsFactory.dailerData = [];
+                    vm.getDailerDetails();
+                },
+            function (result) {
+                console.log('called $uibmodalInstance.dismiss()');
+            });
+        }
+
+        vm.addDailer = function () {
+            var editData = null;
+            openModalPopUp(editData);
+        }
+
+        $scope.gridOptions.columnDefs = [
+             {
+                 name: 'Id',
+                 visible: false,
+                 field: 'Id'
+             }, {
+                 name: 'Country',
+                 field: 'CountryName'
+             }, {
+                 name: 'Mobile',
+                 field: 'MobileName'
+             }, {
+                 name: 'DailerName',
+                 field: 'DailerName'
+             }, {
+                 name: 'OperatorCode',
+                 field: 'OperatorCode'
+             }, {
+                 name: 'Edit',
+                 cellTemplate: '<button ng-click="grid.appScope.editDailer(row.entity)"  class="fa fa-edit">Edit</button>'
+             }, {
+                 name: 'Delete',
+                 cellTemplate: '<button class="btn primary" ng-click="grid.appScope.Delete(row.entity)">Delete Me</button>'
+             }];
 
     }
 
-    angular
-.module('app')
-.controller('dailerDetailsController', dailerDetailsController);
+    angular.module('app').controller('dailerDetailsController', dailerDetailsController);
 
 })();

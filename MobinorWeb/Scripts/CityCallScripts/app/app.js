@@ -1,5 +1,5 @@
 ﻿// App Module Decleration
-var app = angular.module('app', ['ngRoute', 'ui.grid']);
+var app = angular.module('app', ['ngRoute', 'ui.grid','ui.grid.edit','ui.bootstrap','ui.bootstrap.tpls']);
 
 //Showing Routing  
 app.config(['$routeProvider', function ($routeProvider) {
@@ -27,14 +27,14 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 
-//app.run(function (authentication, $rootScope, $location) {
-//    $rootScope.$on('$routeChangeStart', function (evt) {
-//        if (!authentication.isAuthenticated) {
-//            $location.url("/admin");
-//        }
-//        event.preventDefault();
-//    });
-//});
+app.run(function (authentication, $rootScope, $location) {
+    $rootScope.$on('$routeChangeStart', function (evt) {
+        if (!authentication.isAuthenticated) {
+            $location.url("/admin");
+        }
+        event.preventDefault();
+    });
+});
 
 app.factory('authentication', function () {
     return {

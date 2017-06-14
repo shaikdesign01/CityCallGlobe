@@ -34,7 +34,9 @@ namespace MobinorWeb
                         "~/Scripts/ui-grid.js",
                         "~/Scripts/angular-route.js",
                         "~/Scripts/angular-resource.js",
-                        "~/Scripts/lodash.js"));
+                        "~/Scripts/lodash.js",
+                        "~/Scripts/angular-ui/ui-bootstrap.js",
+                        "~/Scripts/angular-ui/ui-bootstrap-tpls.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appendDirectives").Include(
                         "~/Scripts/CityCallScripts/app/app.js",
@@ -46,8 +48,8 @@ namespace MobinorWeb
                      "~/Scripts/CityCallScripts/common/lodashFactory.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appendControllers").Include(
-                      // "~/Scripts/CityCallScripts/Admin/homeController.js",
                          "~/Scripts/CityCallScripts/Admin/dailer/controllers/dailerDetailsController.js",
+                         "~/Scripts/CityCallScripts/Admin/dailer/controllers/addEditDailerDetailsCtrl.js",
                           "~/Scripts/CityCallScripts/Admin/login/controllers/adminHomeController.js",
                          "~/Scripts/CityCallScripts/Admin/login/controllers/indexController.js",
                         "~/Scripts/CityCallScripts/Admin/login/controllers/loginController.js"));

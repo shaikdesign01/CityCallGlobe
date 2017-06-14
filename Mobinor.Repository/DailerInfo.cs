@@ -15,10 +15,10 @@ namespace Mobinor.Repository
     public partial class DailerInfo
     {
         public int Id { get; set; }
-        public Nullable<int> MobileId { get; set; }
         public string DailerName { get; set; }
         public string DailerLink { get; set; }
         public string OperatorCode { get; set; }
+        public Nullable<int> MobileId { get; set; }
         public Nullable<int> CountryId { get; set; }
     }
 }

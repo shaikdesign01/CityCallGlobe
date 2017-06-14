@@ -1,0 +1,32 @@
+﻿<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Add / Edit Dailer Details</h4>
+        </div>
+        <div class="modal-body">
+            <form>                
+                <label>Mobile Details</label>
+
+                <select name="mobileName" id="mobileName"
+                        ng-options="option.MobileName for option in AEDD.mobileData track by option.MobileId"
+                        ng-model="AEDD.dailerInfo.selectedMobileInfo">
+                </select>
+
+                <label>Dailer Name</label>
+                <input type="text" ng-model="AEDD.dailerInfo.DailerName" />
+                <label>Dailer Link</label>
+                <input type="text" ng-model="AEDD.dailerInfo.DailerLink" />
+                <label>Operator Code</label>
+                <input type="text" ng-model="AEDD.dailerInfo.OperatorCode" />
+                <label>Country Details</label>
+                <select name="countryName" id="countryName"
+                        ng-options="option.CountryName for option in AEDD.countryData track by option.CountryId"
+                        ng-model="AEDD.dailerInfo.selectedCountryInfo"></select>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-success" ng-click="AEDD.addEditDailerInfo(AEDD.dailerInfo)">Save</button>
+            <button class="btn btn-warning" ng-click="$close()">Cancel</button>
+        </div>
+    </div>
+</div>

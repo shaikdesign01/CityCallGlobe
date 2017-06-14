@@ -17,3 +17,4 @@ D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFr
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.dll
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.pdb
+D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.Repository\obj\Debug\Mobinor.Repository.csprojResolveAssemblyReference.cache

@@ -4,23 +4,25 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ccgModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ccgModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ckcall_citycallglobe.sms2sami.Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Country">
           <Key>
             <PropertyRef Name="CountryId" />
           </Key>
-          <Property Name="CountryId" Type="int" Nullable="false" />
-          <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="DailerInfo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
-          <Property Name="MobileId" Type="int" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DailerName" Type="nvarchar" MaxLength="50" />
-          <Property Name="DailerLink" Type="nvarchar(max)" />
+          <Property Name="DailerLink" Type="nvarchar" MaxLength="50" />
           <Property Name="OperatorCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileId" Type="int" />
           <Property Name="CountryId" Type="int" />
         </EntityType>
         <EntityType Name="MobileDetails">
@@ -30,34 +32,29 @@
           <Property Name="MobileId" Type="int" Nullable="false" />
           <Property Name="MobileName" Type="nvarchar" MaxLength="255" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ckcall_citycallglobe.sms2sami.sample' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sample">
+          <Property Name="PersonID" Type="int" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+        </EntityType>-->
         <EntityContainer Name="ccgModelStoreContainer">
-          <EntitySet Name="Country" EntityType="Self.Country" Schema="sms2sami" store:Type="Tables" />
           <EntitySet Name="DailerInfo" EntityType="Self.DailerInfo" Schema="sms2sami" store:Type="Tables" />
           <EntitySet Name="MobileDetails" EntityType="Self.MobileDetails" Schema="sms2sami" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" store:Schema="sms2sami">
+            <DefiningQuery>SELECT 
+    [Country].[CountryId] AS [CountryId], 
+    [Country].[CountryName] AS [CountryName]
+    FROM [sms2sami].[Country] AS [Country]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ccgModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Country">
-          <Key>
-            <PropertyRef Name="CountryId" />
-          </Key>
-          <Property Name="CountryId" Type="Int32" Nullable="false" />
-          <Property Name="CountryName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="DailerInfo">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="MobileId" Type="Int32" />
-          <Property Name="DailerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DailerLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="OperatorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CountryId" Type="Int32" />
-        </EntityType>
         <EntityType Name="MobileDetail">
           <Key>
             <PropertyRef Name="MobileId" />
@@ -66,41 +63,59 @@
           <Property Name="MobileName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="ccgEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Countries" EntityType="Self.Country" />
-          <EntitySet Name="DailerInfoes" EntityType="Self.DailerInfo" />
           <EntitySet Name="MobileDetails" EntityType="Self.MobileDetail" />
+          <EntitySet Name="Countries" EntityType="ccgModel.Country" />
+          <EntitySet Name="DailerInfoes" EntityType="ccgModel.DailerInfo" />
         </EntityContainer>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DailerInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DailerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DailerLink" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OperatorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileId" Type="Int32" />
+          <Property Name="CountryId" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ccgModelStoreContainer" CdmEntityContainer="ccgEntities">
+          <EntitySetMapping Name="MobileDetails">
+            <EntityTypeMapping TypeName="ccgModel.MobileDetail">
+              <MappingFragment StoreEntitySet="MobileDetails">
+                <ScalarProperty Name="MobileId" ColumnName="MobileId" />
+                <ScalarProperty Name="MobileName" ColumnName="MobileName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Countries">
             <EntityTypeMapping TypeName="ccgModel.Country">
               <MappingFragment StoreEntitySet="Country">
-                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
                 <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DailerInfoes">
             <EntityTypeMapping TypeName="ccgModel.DailerInfo">
               <MappingFragment StoreEntitySet="DailerInfo">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="MobileId" ColumnName="MobileId" />
-                <ScalarProperty Name="DailerName" ColumnName="DailerName" />
-                <ScalarProperty Name="DailerLink" ColumnName="DailerLink" />
-                <ScalarProperty Name="OperatorCode" ColumnName="OperatorCode" />
                 <ScalarProperty Name="CountryId" ColumnName="CountryId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="MobileDetails">
-            <EntityTypeMapping TypeName="ccgModel.MobileDetail">
-              <MappingFragment StoreEntitySet="MobileDetails">
                 <ScalarProperty Name="MobileId" ColumnName="MobileId" />
-                <ScalarProperty Name="MobileName" ColumnName="MobileName" />
+                <ScalarProperty Name="OperatorCode" ColumnName="OperatorCode" />
+                <ScalarProperty Name="DailerLink" ColumnName="DailerLink" />
+                <ScalarProperty Name="DailerName" ColumnName="DailerName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

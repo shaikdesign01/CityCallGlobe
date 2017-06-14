@@ -25,8 +25,8 @@ namespace Mobinor.Repository
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<MobileDetail> MobileDetails { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<DailerInfo> DailerInfoes { get; set; }
-        public virtual DbSet<MobileDetail> MobileDetails { get; set; }
     }
 }

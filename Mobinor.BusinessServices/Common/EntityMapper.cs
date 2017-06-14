@@ -21,6 +21,7 @@ namespace Mobinor.BusinessServices.Common
                 cfg.CreateMap<Country, BusinessObjects.Country>();
                 cfg.CreateMap<DailerInfo, BusinessObjects.DailersInfo>();
                 cfg.CreateMap<MobileDetail, BusinessObjects.MobileDetail>();
+                cfg.CreateMap<BusinessObjects.DailersInfo, Repository.DailerInfo> ();
 
             }).CreateMapper();
         /// <summary>
@@ -51,6 +52,12 @@ namespace Mobinor.BusinessServices.Common
         public static IEnumerable<BusinessObjects.MobileDetail> ConvertEntityToModel(IEnumerable<MobileDetail> data)
         {
             return MobinorMapper.Map<IEnumerable<BusinessObjects.MobileDetail>>(data);
+        }
+
+
+        public static Repository.DailerInfo ConvertMModelToEntity(BusinessObjects.DailersInfo data)
+        {
+            return MobinorMapper.Map<Repository.DailerInfo>(data);
         }
     }
 }

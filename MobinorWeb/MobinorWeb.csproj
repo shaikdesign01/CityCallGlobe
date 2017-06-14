@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add_dialer.html" />
+    <Content Include="Content\templates\Admin\dailer\addEditDailerDetails.tmpl.html" />
     <Content Include="Content\templates\Admin\login\adminHome.html" />
     <Content Include="Content\css\angular-material.css" />
     <Content Include="Content\css\angular-material.layout-attributes.css" />
@@ -336,7 +337,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Scripts\CityCallScripts\Admin\adminApp.js" />
+    <Content Include="Scripts\CityCallScripts\Admin\dailer\controllers\addEditDailerDetailsCtrl.js" />
     <Content Include="Scripts\CityCallScripts\Admin\dailer\controllers\dailerDetailsController.js" />
     <Content Include="Scripts\CityCallScripts\Admin\dailer\directives\dailerDetailsDirective.js" />
     <Content Include="Scripts\CityCallScripts\Admin\dailer\services\dailerDetailsService.js" />

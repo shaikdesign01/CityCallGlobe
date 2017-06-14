@@ -37,13 +37,6 @@ namespace Mobinor.BusinessServices
             return data;
         }
 
-        //public IEnumerable<string> GetCountries()
-        //{
-        //    IEnumerable<string> sresults;
-        //    var query = from rel in DbContext.Countries select rel;
-        //    return sresults = query.ToList().Select(s => s.CountryName);
-        //} 
-
         /// <summary>
         /// Get Dailers Details
         /// </summary>
@@ -71,6 +64,32 @@ namespace Mobinor.BusinessServices
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Updates Dailer Info
+        /// </summary>
+        /// <param name="dailersData"></param>
+        /// <returns></returns>
+        public void UpdateDailerDetails(DailersInfo dailersData)
+        {
+            Repository.DailerInfo data = EntityMapper.ConvertMModelToEntity(dailersData);
+             this.dailerInfoRepo.UpdateDailerDetails(data);
+        }
+
+        public void DeleteDailerDetails(int dailerId)
+        {
+            this.dailerInfoRepo.DeleteDailerDetails(dailerId);
+        }
+
+        /// <summary>
+        /// Save Dailer Details
+        /// </summary>
+        /// <param name="dailersData"></param>
+        public void SaveDailersDetails(DailersInfo dailersData)
+        {
+            Repository.DailerInfo data = EntityMapper.ConvertMModelToEntity(dailersData);
+            this.dailerInfoRepo.SaveDailersDetails(data);
         }
     }
 }

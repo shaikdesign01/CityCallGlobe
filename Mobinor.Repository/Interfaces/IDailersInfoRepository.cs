@@ -24,5 +24,24 @@ namespace Mobinor.Repository.Interfaces
         /// </summary>
         /// <returns></returns>
         IEnumerable<MobileDetail> GetMobileDetails();
+
+        /// <summary>
+        /// Updates dailer info record
+        /// </summary>
+        /// <param name="DailerInfo"></param>
+        /// <returns></returns>
+        void UpdateDailerDetails(DailerInfo dailerInfo);
+
+        /// <summary>
+        /// Deletes the dailer info
+        /// </summary>
+        /// <param name="dailerInfo"></param>
+        void DeleteDailerDetails(int dailerId);
+
+        /// <summary>
+        /// Save Dailer Details
+        /// </summary>
+        /// <param name="dailersData"></param>
+        void SaveDailersDetails(DailerInfo dailersData);
     }
 }

@@ -5,6 +5,5 @@ D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessObjects\obj\Debug\Mobino
 D:\Projects\Mushtak_Projects\MobinorWeb\Mobinor.BusinessObjects\obj\Debug\Mobinor.BusinessObjects.csprojResolveAssemblyReference.cache
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\bin\Debug\Mobinor.BusinessObjects.dll
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\bin\Debug\Mobinor.BusinessObjects.pdb
-D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Debug\Mobinor.BusinessObjects.csprojResolveAssemblyReference.cache
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Debug\Mobinor.BusinessObjects.dll
 D:\Projects\Mushtak_Projects\CityCallGlobe\Mobinor.BusinessObjects\obj\Debug\Mobinor.BusinessObjects.pdb

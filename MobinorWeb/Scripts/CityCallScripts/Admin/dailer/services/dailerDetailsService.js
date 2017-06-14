@@ -12,62 +12,88 @@
         $http,
         $q,
         dailerDetailsFactory
-        ){
-
-       // var _this = this;
+        ) {
 
         return {
             getCountries: getCountries,
             getDailerDetails: getDailerDetails,
-            getMobileDetails: getMobileDetails
+            getMobileDetails: getMobileDetails,
+            updateDailersInfo: updateDailersInfo,
+            deleteDailersInfo:deleteDailersInfo,
+            addDailerInfo: addDailerInfo
         };
 
         function getCountries() {
             var defferObj = $q.defer();
-            if (_.isEmpty(dailerDetailsFactory.getCountries)) {
+            if (_.isEmpty(dailerDetailsFactory.countrydata)) {
                 $http({
                     method: "GET",
                     url: "api/DailerInfoApi/GetCountries"
                 }).then(function (response) {
-                    dailerDetailsFactory.getCountries = response.data;
+                    dailerDetailsFactory.countrydata = response.data;
                     defferObj.resolve(response.data || []);
                 });
             } else {
-                defferObj.resolve(dailerDetailsFactory.getCountries);
+                defferObj.resolve(dailerDetailsFactory.countrydata);
             }
             return defferObj.promise;
         }
 
         function getDailerDetails() {
             var defferObj = $q.defer();
-            if (_.isEmpty(dailerDetailsFactory.getDailerDetails)) {
+            if (_.isEmpty(dailerDetailsFactory.dailerData)) {
                 $http({
                     method: "GET",
                     url: "api/DailerInfoApi/GetDailerDetails"
                 }).then(function (response) {
-                    dailerDetailsFactory.getDailerDetails = response.data;
+                    dailerDetailsFactory.dailerData = response.data;
                     defferObj.resolve(response.data || []);
                 });
             } else {
-                defferObj.resolve(dailerDetailsFactory.getDailerDetails);
+                defferObj.resolve(dailerDetailsFactory.dailerData);
             }
             return defferObj.promise;
         }
 
         function getMobileDetails() {
             var defferObj = $q.defer();
-            if (_.isEmpty(dailerDetailsFactory.getMobileDetails)) {
+            if (_.isEmpty(dailerDetailsFactory.mobileData)) {
                 $http({
                     method: "GET",
                     url: "api/DailerInfoApi/GetMobileDetails"
                 }).then(function (response) {
-                    dailerDetailsFactory.getMobileDetails = response.data;
+                    dailerDetailsFactory.mobileData = response.data;
                     defferObj.resolve(response.data || []);
                 });
             } else {
-                defferObj.resolve(dailerDetailsFactory.getMobileDetails);
+                defferObj.resolve(dailerDetailsFactory.mobileData);
             }
             return defferObj.promise;
+        }
+
+
+        function updateDailersInfo(dailersInfo) {
+           return $http({
+                method: 'POST',
+                url: 'api/DailerInfoApi/UpdateDailerInfo',
+                data: dailersInfo
+            });
+        }
+
+        function deleteDailersInfo(dailerId) {
+            return $http({
+                method: 'DELETE',
+                url: 'api/DailerInfoApi/DeleteDailerInfo',
+                params: { dailerId: dailerId }
+            });
+        }
+
+        function addDailerInfo(dailersInfo) {
+            return $http({
+                method: 'POST',
+                url: 'api/DailerInfoApi/AddDailerInfo',
+                data: dailersInfo
+            });
         }
     }
 

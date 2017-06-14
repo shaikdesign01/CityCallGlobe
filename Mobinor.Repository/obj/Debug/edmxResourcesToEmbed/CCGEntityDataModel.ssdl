@@ -1,21 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ccgModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ckcall_citycallglobe.sms2sami.Country' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="Country">
     <Key>
       <PropertyRef Name="CountryId" />
     </Key>
-    <Property Name="CountryId" Type="int" Nullable="false" />
-    <Property Name="CountryName" Type="nvarchar" MaxLength="255" />
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="DailerInfo">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
-    <Property Name="MobileId" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DailerName" Type="nvarchar" MaxLength="50" />
-    <Property Name="DailerLink" Type="nvarchar(max)" />
+    <Property Name="DailerLink" Type="nvarchar" MaxLength="50" />
     <Property Name="OperatorCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileId" Type="int" />
     <Property Name="CountryId" Type="int" />
   </EntityType>
   <EntityType Name="MobileDetails">
@@ -25,9 +27,23 @@
     <Property Name="MobileId" Type="int" Nullable="false" />
     <Property Name="MobileName" Type="nvarchar" MaxLength="255" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'ckcall_citycallglobe.sms2sami.sample' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sample">
+          <Property Name="PersonID" Type="int" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+        </EntityType>-->
   <EntityContainer Name="ccgModelStoreContainer">
-    <EntitySet Name="Country" EntityType="Self.Country" Schema="sms2sami" store:Type="Tables" />
     <EntitySet Name="DailerInfo" EntityType="Self.DailerInfo" Schema="sms2sami" store:Type="Tables" />
     <EntitySet Name="MobileDetails" EntityType="Self.MobileDetails" Schema="sms2sami" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" store:Schema="sms2sami">
+      <DefiningQuery>SELECT 
+    [Country].[CountryId] AS [CountryId], 
+    [Country].[CountryName] AS [CountryName]
+    FROM [sms2sami].[Country] AS [Country]</DefiningQuery>
+    </EntitySet>
   </EntityContainer>
 </Schema>

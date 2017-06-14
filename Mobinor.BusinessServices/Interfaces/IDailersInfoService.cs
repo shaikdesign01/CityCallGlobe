@@ -23,6 +23,23 @@ namespace Mobinor.BusinessServices.Interfaces
         /// Gets mobile details
         /// </summary>
         /// <returns></returns>
-        IEnumerable<MobileDetail> GetMobileDetails()
-;    }
+        IEnumerable<MobileDetail> GetMobileDetails();
+
+        /// <summary>
+        /// Updated Dailer Info
+        /// </summary>
+        /// <param name="dailersData"></param>
+        /// <returns></returns>
+        void UpdateDailerDetails(DailersInfo dailersData);
+        /// <summary>
+        /// Deletes the dailers info
+        /// </summary>
+        /// <param name="dailerId"></param>
+        void DeleteDailerDetails(int dailerId);
+        /// <summary>
+        /// Save Dailer Details
+        /// </summary>
+        /// <param name="dailersData"></param>
+        void SaveDailersDetails(DailersInfo dailersData);
+   }
 }

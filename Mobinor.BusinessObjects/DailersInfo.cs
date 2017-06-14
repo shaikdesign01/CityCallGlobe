@@ -7,6 +7,11 @@ namespace Mobinor.BusinessObjects
     /// </summary>
     public class DailersInfo
     {
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        public int Id { get; set; }
         /// <summary>
         /// Gets or Sets MobileId
         /// </summary>

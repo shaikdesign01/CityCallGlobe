@@ -15,6 +15,7 @@ namespace MobinorWeb.ApiControllers
         /// Instance for IDailersInfoService
         /// </summary>
         private readonly IDailersInfoService dailersInfo;
+
         /// <summary>
         /// DailersInfoService Instance creation
         /// </summary>
@@ -49,6 +50,36 @@ namespace MobinorWeb.ApiControllers
         public IEnumerable<MobileDetail> GetMobileDetails()
         {
             return dailersInfo.GetMobileDetails();
+        }
+
+        /// <summary>
+        /// Updates the dailer details
+        /// </summary>
+        /// <param name="dailersData"></param>
+        [HttpPost]
+        public void UpdateDailerInfo(DailersInfo dailersData)
+        {
+            dailersInfo.UpdateDailerDetails(dailersData);
+        }
+
+        /// <summary>
+        /// Delete Dailer Info
+        /// </summary>
+        /// <param name="dailerId"></param>
+        [HttpDelete]
+        public void DeleteDailerInfo(int dailerId)
+        {
+            dailersInfo.DeleteDailerDetails(dailerId);
+        }
+
+        /// <summary>
+        /// Add Dailers Data
+        /// </summary>
+        /// <param name="dailersData"></param>
+        [HttpPost]
+        public void AddDailerInfo(DailersInfo dailersData)
+        {
+            dailersInfo.SaveDailersDetails(dailersData);
         }
     }
 }
