@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add_dialer.html" />
+    <Content Include="Content\css\skeleton.min.css" />
     <Content Include="Content\templates\Admin\dailer\addEditDailerDetails.tmpl.html" />
     <Content Include="Content\templates\Admin\login\adminHome.html" />
     <Content Include="Content\css\angular-material.css" />
